@@ -5,16 +5,16 @@ namespace prueba
         public Form1()
         {
             InitializeComponent();
-            InitButtonArray();
+            InitLabelArray();
         }
 
         public string AsignarCoordenadasBotones()
         {
             string coordenadas = "";
 
-            foreach (var button in buttonArray)
+            foreach (var label in labelArray)
             {
-                if (button.Tag is string coord)
+                if (label.Tag is string coord)
                 {
                     coordenadas += coord + " ";
                 }
@@ -25,9 +25,9 @@ namespace prueba
 
         private void label_Click(object sender, EventArgs e)
         {
-            Label button = sender as Label;
+            Label label = sender as Label;
 
-            if (button != null && button.Tag is string coordenada)
+            if (label != null && label.Tag is string coordenada)
             {
                 MessageBox.Show($"Coordenada del botón: {coordenada}");
             }

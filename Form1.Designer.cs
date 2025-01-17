@@ -20,11 +20,11 @@
             base.Dispose(disposing);
         }
 
-        private Label[] buttonArray;
+        private Label[] labelArray;
 
-        private void InitButtonArray()
+        private void InitLabelArray()
         {
-            buttonArray = new Label[]
+            labelArray = new Label[]
             {
                 label1, label2, label3, label4, label5, label6, label7,
                 label8, label9, label10, label11, label12, label13, label14,
@@ -34,14 +34,14 @@
                 label36, label37, label38, label39, label40, label41, label42
             };
 
-            for (int i = 0; i < buttonArray.Length; i++)
+            for (int i = 0; i < labelArray.Length; i++)
             {
-                buttonArray[i].Click += label_Click;
+                labelArray[i].Click += label_Click;
 
                 int x = (i % 7) + 1;
                 int y = (i / 7) + 1;
 
-                buttonArray[i].Tag = $"({x},{y})";
+                labelArray[i].Tag = $"({x},{y})";
             }
         }
 
