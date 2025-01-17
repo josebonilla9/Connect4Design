@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("connect4Design")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Connect4Design")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("connect4Design")]
-[assembly: System.Reflection.AssemblyTitleAttribute("connect4Design")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d3569076b9608bc6f7734d9b360fa5a66e57e597")]
+[assembly: System.Reflection.AssemblyProductAttribute("Connect4Design")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Connect4Design")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]

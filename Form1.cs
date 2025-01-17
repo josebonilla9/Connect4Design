@@ -5,16 +5,32 @@ namespace prueba
         public Form1()
         {
             InitializeComponent();
+            InitButtonArray();
         }
 
-        public void EjemploText_TextChanged(object sender, EventArgs e)
+        public string AsignarCoordenadasBotones()
         {
+            string coordenadas = "";
 
+            foreach (var button in buttonArray)
+            {
+                if (button.Tag is string coord)
+                {
+                    coordenadas += coord + " ";
+                }
+            }
+
+            return coordenadas.Trim();
         }
 
-        private void splitContainer1_Panel2_Paint(object sender, PaintEventArgs e)
+        private void label_Click(object sender, EventArgs e)
         {
+            Label button = sender as Label;
 
+            if (button != null && button.Tag is string coordenada)
+            {
+                MessageBox.Show($"Coordenada del botón: {coordenada}");
+            }
         }
     }
 }
