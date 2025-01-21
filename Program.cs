@@ -1,5 +1,4 @@
-﻿
-using System.Text.Json.Nodes;
+﻿using System.Text.Json.Nodes;
 
 class Program
 {
@@ -12,7 +11,7 @@ class Program
         int currentPlayer = 1;
         bool gameOver = false;
 
-        string apiKey = "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"; //Aquí va la API Key
+        string apiKey = ""; //Aquí va la API Key
         AIProgram aiProgram = new AIProgram(apiKey);
 
         game.Board.PrintBoard();
@@ -206,7 +205,7 @@ public class Game
         {
             for (int row = 0; row <= 2; row++)
             {
-                if (Board.GetPiece(row, col) == player &&  Board.GetPiece(row + 1, col) == player && Board.GetPiece(row + 2, col) == player && Board.GetPiece(row + 3, col) == player)
+                if (Board.GetPiece(row, col) == player && Board.GetPiece(row + 1, col) == player && Board.GetPiece(row + 2, col) == player && Board.GetPiece(row + 3, col) == player)
                 {
                     return true;
                 }

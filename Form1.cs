@@ -1,7 +1,10 @@
+using Connect4Design;
+
 namespace prueba
 {
     public partial class Form1 : Form
     {
+        VentanaEmergente ventanaEmergente = new VentanaEmergente();
         public Form1()
         {
             InitializeComponent();
@@ -31,6 +34,11 @@ namespace prueba
             {
                 MessageBox.Show($"Coordenada del botón: {coordenada}");
             }
+        }
+
+        private void label43_Click(object sender, EventArgs e)
+        {
+            ventanaEmergente.Show();
         }
     }
 }

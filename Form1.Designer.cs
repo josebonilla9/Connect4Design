@@ -2,15 +2,8 @@
 {
     partial class Form1
     {
-        /// <summary>
-        ///  Required designer variable.
-        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
-        /// <summary>
-        ///  Clean up any resources being used.
-        /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -67,11 +60,6 @@
             label6 = new Label();
             label7 = new Label();
             secondRowPanel = new FlowLayoutPanel();
-            thirdRowPanel = new FlowLayoutPanel();
-            fourthRowPanel = new FlowLayoutPanel();
-            fifthRowPanel = new FlowLayoutPanel();
-            sixthRowPanel = new FlowLayoutPanel();
-            difficultyChooser = new ComboBox();
             label8 = new Label();
             label9 = new Label();
             label10 = new Label();
@@ -79,6 +67,7 @@
             label12 = new Label();
             label13 = new Label();
             label14 = new Label();
+            thirdRowPanel = new FlowLayoutPanel();
             label15 = new Label();
             label16 = new Label();
             label17 = new Label();
@@ -86,6 +75,7 @@
             label19 = new Label();
             label20 = new Label();
             label21 = new Label();
+            fourthRowPanel = new FlowLayoutPanel();
             label22 = new Label();
             label23 = new Label();
             label24 = new Label();
@@ -93,6 +83,7 @@
             label26 = new Label();
             label27 = new Label();
             label28 = new Label();
+            fifthRowPanel = new FlowLayoutPanel();
             label29 = new Label();
             label30 = new Label();
             label31 = new Label();
@@ -100,6 +91,7 @@
             label33 = new Label();
             label34 = new Label();
             label35 = new Label();
+            sixthRowPanel = new FlowLayoutPanel();
             label36 = new Label();
             label37 = new Label();
             label38 = new Label();
@@ -107,6 +99,8 @@
             label40 = new Label();
             label41 = new Label();
             label42 = new Label();
+            difficultyChooser = new ComboBox();
+            label43 = new Label();
             mainPanel.SuspendLayout();
             gamePanel.SuspendLayout();
             firstRowPanel.SuspendLayout();
@@ -128,6 +122,7 @@
             // 
             // mainPanel
             // 
+            mainPanel.Controls.Add(label43);
             mainPanel.Controls.Add(gamePanel);
             mainPanel.Controls.Add(difficultyLabel);
             mainPanel.Controls.Add(difficultyChooser);
@@ -241,70 +236,6 @@
             secondRowPanel.Size = new Size(948, 96);
             secondRowPanel.TabIndex = 7;
             // 
-            // thirdRowPanel
-            // 
-            thirdRowPanel.Controls.Add(label15);
-            thirdRowPanel.Controls.Add(label16);
-            thirdRowPanel.Controls.Add(label17);
-            thirdRowPanel.Controls.Add(label18);
-            thirdRowPanel.Controls.Add(label19);
-            thirdRowPanel.Controls.Add(label20);
-            thirdRowPanel.Controls.Add(label21);
-            thirdRowPanel.Location = new Point(3, 314);
-            thirdRowPanel.Name = "thirdRowPanel";
-            thirdRowPanel.Size = new Size(948, 96);
-            thirdRowPanel.TabIndex = 8;
-            // 
-            // fourthRowPanel
-            // 
-            fourthRowPanel.Controls.Add(label22);
-            fourthRowPanel.Controls.Add(label23);
-            fourthRowPanel.Controls.Add(label24);
-            fourthRowPanel.Controls.Add(label25);
-            fourthRowPanel.Controls.Add(label26);
-            fourthRowPanel.Controls.Add(label27);
-            fourthRowPanel.Controls.Add(label28);
-            fourthRowPanel.Location = new Point(3, 212);
-            fourthRowPanel.Name = "fourthRowPanel";
-            fourthRowPanel.Size = new Size(948, 96);
-            fourthRowPanel.TabIndex = 9;
-            // 
-            // fifthRowPanel
-            // 
-            fifthRowPanel.Controls.Add(label29);
-            fifthRowPanel.Controls.Add(label30);
-            fifthRowPanel.Controls.Add(label31);
-            fifthRowPanel.Controls.Add(label32);
-            fifthRowPanel.Controls.Add(label33);
-            fifthRowPanel.Controls.Add(label34);
-            fifthRowPanel.Controls.Add(label35);
-            fifthRowPanel.Location = new Point(3, 110);
-            fifthRowPanel.Name = "fifthRowPanel";
-            fifthRowPanel.Size = new Size(948, 96);
-            fifthRowPanel.TabIndex = 10;
-            // 
-            // sixthRowPanel
-            // 
-            sixthRowPanel.Controls.Add(label36);
-            sixthRowPanel.Controls.Add(label37);
-            sixthRowPanel.Controls.Add(label38);
-            sixthRowPanel.Controls.Add(label39);
-            sixthRowPanel.Controls.Add(label40);
-            sixthRowPanel.Controls.Add(label41);
-            sixthRowPanel.Controls.Add(label42);
-            sixthRowPanel.Location = new Point(3, 8);
-            sixthRowPanel.Name = "sixthRowPanel";
-            sixthRowPanel.Size = new Size(948, 96);
-            sixthRowPanel.TabIndex = 11;
-            // 
-            // difficultyChooser
-            // 
-            difficultyChooser.FormattingEnabled = true;
-            difficultyChooser.Location = new Point(768, 18);
-            difficultyChooser.Name = "difficultyChooser";
-            difficultyChooser.Size = new Size(121, 23);
-            difficultyChooser.TabIndex = 11;
-            // 
             // label8
             // 
             label8.BorderStyle = BorderStyle.FixedSingle;
@@ -367,6 +298,20 @@
             label14.Name = "label14";
             label14.Size = new Size(129, 96);
             label14.TabIndex = 13;
+            // 
+            // thirdRowPanel
+            // 
+            thirdRowPanel.Controls.Add(label15);
+            thirdRowPanel.Controls.Add(label16);
+            thirdRowPanel.Controls.Add(label17);
+            thirdRowPanel.Controls.Add(label18);
+            thirdRowPanel.Controls.Add(label19);
+            thirdRowPanel.Controls.Add(label20);
+            thirdRowPanel.Controls.Add(label21);
+            thirdRowPanel.Location = new Point(3, 314);
+            thirdRowPanel.Name = "thirdRowPanel";
+            thirdRowPanel.Size = new Size(948, 96);
+            thirdRowPanel.TabIndex = 8;
             // 
             // label15
             // 
@@ -431,6 +376,20 @@
             label21.Size = new Size(129, 96);
             label21.TabIndex = 13;
             // 
+            // fourthRowPanel
+            // 
+            fourthRowPanel.Controls.Add(label22);
+            fourthRowPanel.Controls.Add(label23);
+            fourthRowPanel.Controls.Add(label24);
+            fourthRowPanel.Controls.Add(label25);
+            fourthRowPanel.Controls.Add(label26);
+            fourthRowPanel.Controls.Add(label27);
+            fourthRowPanel.Controls.Add(label28);
+            fourthRowPanel.Location = new Point(3, 212);
+            fourthRowPanel.Name = "fourthRowPanel";
+            fourthRowPanel.Size = new Size(948, 96);
+            fourthRowPanel.TabIndex = 9;
+            // 
             // label22
             // 
             label22.BorderStyle = BorderStyle.FixedSingle;
@@ -493,6 +452,20 @@
             label28.Name = "label28";
             label28.Size = new Size(129, 96);
             label28.TabIndex = 13;
+            // 
+            // fifthRowPanel
+            // 
+            fifthRowPanel.Controls.Add(label29);
+            fifthRowPanel.Controls.Add(label30);
+            fifthRowPanel.Controls.Add(label31);
+            fifthRowPanel.Controls.Add(label32);
+            fifthRowPanel.Controls.Add(label33);
+            fifthRowPanel.Controls.Add(label34);
+            fifthRowPanel.Controls.Add(label35);
+            fifthRowPanel.Location = new Point(3, 110);
+            fifthRowPanel.Name = "fifthRowPanel";
+            fifthRowPanel.Size = new Size(948, 96);
+            fifthRowPanel.TabIndex = 10;
             // 
             // label29
             // 
@@ -557,6 +530,20 @@
             label35.Size = new Size(129, 96);
             label35.TabIndex = 13;
             // 
+            // sixthRowPanel
+            // 
+            sixthRowPanel.Controls.Add(label36);
+            sixthRowPanel.Controls.Add(label37);
+            sixthRowPanel.Controls.Add(label38);
+            sixthRowPanel.Controls.Add(label39);
+            sixthRowPanel.Controls.Add(label40);
+            sixthRowPanel.Controls.Add(label41);
+            sixthRowPanel.Controls.Add(label42);
+            sixthRowPanel.Location = new Point(3, 8);
+            sixthRowPanel.Name = "sixthRowPanel";
+            sixthRowPanel.Size = new Size(948, 96);
+            sixthRowPanel.TabIndex = 11;
+            // 
             // label36
             // 
             label36.BorderStyle = BorderStyle.FixedSingle;
@@ -619,6 +606,25 @@
             label42.Name = "label42";
             label42.Size = new Size(129, 96);
             label42.TabIndex = 13;
+            // 
+            // difficultyChooser
+            // 
+            difficultyChooser.FormattingEnabled = true;
+            difficultyChooser.Location = new Point(768, 18);
+            difficultyChooser.Name = "difficultyChooser";
+            difficultyChooser.Size = new Size(121, 23);
+            difficultyChooser.TabIndex = 11;
+            // 
+            // label43
+            // 
+            label43.AutoSize = true;
+            label43.Cursor = Cursors.Hand;
+            label43.Location = new Point(149, 17);
+            label43.Name = "label43";
+            label43.Size = new Size(109, 15);
+            label43.TabIndex = 13;
+            label43.Text = "Ventana Emergente";
+            label43.Click += label43_Click;
             // 
             // Form1
             // 
@@ -693,5 +699,6 @@
         private Label label40;
         private Label label41;
         private Label label42;
+        private Label label43;
     }
 }
