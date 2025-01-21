@@ -1,9 +1,16 @@
 ﻿namespace Connect4Design
 {
-    partial class VentanaEmergente
+    partial class pruebaForm
     {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
         private System.ComponentModel.IContainer components = null;
 
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -13,8 +20,6 @@
             base.Dispose(disposing);
         }
 
-
-
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -23,55 +28,55 @@
         /// </summary>
         private void InitializeComponent()
         {
+            sendButton = new Button();
             sendBox = new TextBox();
             chatBox = new TextBox();
-            sendButton = new Button();
             SuspendLayout();
-            // 
-            // sendBox
-            // 
-            sendBox.Location = new Point(194, 22);
-            sendBox.Multiline = true;
-            sendBox.Name = "sendBox";
-            sendBox.ReadOnly = true;
-            sendBox.Size = new Size(400, 354);
-            sendBox.TabIndex = 0;
-            sendBox.TextChanged += sendBox_TextChanged;
-            // 
-            // chatBox
-            // 
-            chatBox.Location = new Point(194, 399);
-            chatBox.Name = "chatBox";
-            chatBox.Size = new Size(400, 23);
-            chatBox.TabIndex = 1;
             // 
             // sendButton
             // 
-            sendButton.Location = new Point(600, 398);
+            sendButton.Location = new Point(564, 401);
             sendButton.Name = "sendButton";
             sendButton.Size = new Size(78, 24);
-            sendButton.TabIndex = 2;
+            sendButton.TabIndex = 5;
             sendButton.Text = "Send";
             sendButton.UseVisualStyleBackColor = true;
             // 
-            // VentanaEmergente
+            // sendBox
+            // 
+            sendBox.Location = new Point(158, 402);
+            sendBox.Name = "sendBox";
+            sendBox.Size = new Size(400, 23);
+            sendBox.TabIndex = 4;
+            // 
+            // chatBox
+            // 
+            chatBox.Location = new Point(158, 25);
+            chatBox.Multiline = true;
+            chatBox.Name = "chatBox";
+            chatBox.ReadOnly = true;
+            chatBox.Size = new Size(400, 354);
+            chatBox.TabIndex = 3;
+            // 
+            // pruebaForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(sendButton);
-            Controls.Add(chatBox);
             Controls.Add(sendBox);
-            Name = "VentanaEmergente";
-            Text = "VentanaEmergente";
+            Controls.Add(chatBox);
+            Name = "pruebaForm";
+            Text = "pruebaForm";
+            Load += pruebaForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
+        private Button sendButton;
         private TextBox sendBox;
         private TextBox chatBox;
-        private Button sendButton;
     }
 }

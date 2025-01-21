@@ -1,3 +1,5 @@
+using Connect4Design;
+
 namespace prueba
 {
     internal static class MainProgram
@@ -5,10 +7,16 @@ namespace prueba
         [STAThread]
         static async Task Main()
         {
-            Application.Run(new Form1());
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
 
-            Program iaProgram =  new Program();
-            await iaProgram.gameInit();
+            pruebaForm ventanaEmergente = new pruebaForm();
+            ventanaEmergente.Show();
+
+            Program iaProgram = new Program();
+            await iaProgram.gameInit(ventanaEmergente);
+
+
         }
     }
 }

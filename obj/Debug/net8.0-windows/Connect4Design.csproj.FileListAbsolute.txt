@@ -15,4 +15,4 @@ C:\Users\jose1\source\repos\prueba\prueba\obj\Debug\net8.0-windows\refint\Connec
 C:\Users\jose1\source\repos\prueba\prueba\obj\Debug\net8.0-windows\Connect4Design.pdb
 C:\Users\jose1\source\repos\prueba\prueba\obj\Debug\net8.0-windows\Connect4Design.genruntimeconfig.cache
 C:\Users\jose1\source\repos\prueba\prueba\obj\Debug\net8.0-windows\ref\Connect4Design.dll
-C:\Users\jose1\source\repos\prueba\prueba\obj\Debug\net8.0-windows\Connect4Design.VentanaEmergente.resources
+C:\Users\jose1\source\repos\prueba\prueba\obj\Debug\net8.0-windows\Connect4Design.pruebaForm.resources

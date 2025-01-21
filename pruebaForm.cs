@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Connect4Design
 {
-    public partial class VentanaEmergente : Form
+    public partial class pruebaForm : Form
     {
-        public VentanaEmergente()
+        public pruebaForm()
         {
             InitializeComponent();
         }
@@ -21,8 +21,7 @@ namespace Connect4Design
         public TextBox SendBox => sendBox;
         public Button SendButton => sendButton;
 
-
-        private void sendBox_TextChanged(object sender, EventArgs e)
+        private void pruebaForm_Load(object sender, EventArgs e)
         {
 
         }

@@ -1,8 +1,10 @@
 ﻿using System.Text.Json.Nodes;
+using Connect4Design;
+using prueba;
 
 class Program
 {
-    public void gameInit()
+    public async Task gameInit(pruebaForm ventanaEmergente)
     {
         Game game = new Game();
         Player humanPlayer = new Player();
@@ -18,28 +20,37 @@ class Program
 
         while (!gameOver)
         {
-            Console.WriteLine(isHumanTurn ? "Turno del jugador humano (1):" : "Turno de la IA (2):");
+            ventanaEmergente.ChatBox.AppendText(isHumanTurn ? "Turno del jugador humano (1):\n" : "Turno de la IA (2):\n");
 
             if (isHumanTurn)
             {
-                Console.Write("Elige una columna (0-6): ");
-                int col;
-                while (!int.TryParse(Console.ReadLine(), out col) || col < 0 || col > 6)
+                ventanaEmergente.SendButton.Click += (sender, e) =>
                 {
-                    Console.WriteLine("Entrada inválida. Ingresa un número entre 0 y 6.");
-                }
-
-                if (!game.Board.AddPiece(col, currentPlayer))
-                {
-                    Console.WriteLine("Columna llena. Intenta de nuevo.");
-                    continue;
-                }
+                    int col;
+                    if (int.TryParse(ventanaEmergente.SendBox.Text, out col) && col >= 0 && col <= 6)
+                    {
+                        if (!game.Board.AddPiece(col, currentPlayer))
+                        {
+                            ventanaEmergente.ChatBox.AppendText("Columna llena. Intenta de nuevo.\n");
+                        }
+                        else
+                        {
+                            isHumanTurn = !isHumanTurn;
+                            currentPlayer = isHumanTurn ? 1 : 2;
+                        }
+                    }
+                    else
+                    {
+                        ventanaEmergente.ChatBox.AppendText("Entrada inválida. Ingresa un número entre 0 y 6.\n");
+                    }
+                    ventanaEmergente.SendBox.Clear();
+                };
             }
             else
             {
                 string boardState = BoardToString(game.Board);
-                string response = aiProgram.GetAIResponseAsync(boardState).Result;
-                Console.WriteLine("IA Asistente: " + response);
+                string response = await aiProgram.GetAIResponseAsync(boardState);
+                ventanaEmergente.ChatBox.AppendText("IA Asistente: " + response + "\n");
 
                 if (int.TryParse(response, out int col) && col >= 0 && col <= 6)
                 {
@@ -50,7 +61,7 @@ class Program
                 }
                 else
                 {
-                    Console.WriteLine("La IA devolvió una columna no válida.");
+                    ventanaEmergente.ChatBox.AppendText("La IA devolvió una columna no válida.\n");
                     continue;
                 }
             }
@@ -59,23 +70,19 @@ class Program
 
             if (game.CheckVictory(currentPlayer))
             {
-                Console.WriteLine(isHumanTurn ? "¡Felicidades! El jugador humano ha ganado." : "La IA ha ganado. ¡Mejor suerte la próxima vez!");
+                ventanaEmergente.ChatBox.AppendText(isHumanTurn ? "¡Felicidades! El jugador humano ha ganado.\n" : "La IA ha ganado. ¡Mejor suerte la próxima vez!\n");
                 gameOver = true;
                 break;
             }
 
-            isHumanTurn = !isHumanTurn;
-            currentPlayer = isHumanTurn ? 1 : 2;
-
             if (IsBoardFull(game.Board))
             {
-                Console.WriteLine("El tablero está lleno. ¡Es un empate!");
+                ventanaEmergente.ChatBox.AppendText("El tablero está lleno. ¡Es un empate!\n");
                 gameOver = true;
             }
         }
 
-        Console.WriteLine("Juego terminado. Gracias por jugar.");
-        Console.ReadLine();
+        ventanaEmergente.ChatBox.AppendText("Juego terminado. Gracias por jugar.\n");
     }
 
     static bool IsBoardFull(Board board)
@@ -205,7 +212,7 @@ public class Game
         {
             for (int row = 0; row <= 2; row++)
             {
-                if (Board.GetPiece(row, col) == player && Board.GetPiece(row + 1, col) == player && Board.GetPiece(row + 2, col) == player && Board.GetPiece(row + 3, col) == player)
+                if (Board.GetPiece(row, col) == player &&  Board.GetPiece(row + 1, col) == player && Board.GetPiece(row + 2, col) == player && Board.GetPiece(row + 3, col) == player)
                 {
                     return true;
                 }

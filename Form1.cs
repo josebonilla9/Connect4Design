@@ -4,7 +4,7 @@ namespace prueba
 {
     public partial class Form1 : Form
     {
-        VentanaEmergente ventanaEmergente = new VentanaEmergente();
+        pruebaForm ventanaEmergente = new pruebaForm();
         public Form1()
         {
             InitializeComponent();
