@@ -5,18 +5,13 @@ namespace prueba
     internal static class MainProgram
     {
         [STAThread]
-        static async Task Main()
+        static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            pruebaForm ventanaEmergente = new pruebaForm();
-            ventanaEmergente.Show();
-
-            Program iaProgram = new Program();
-            await iaProgram.gameInit(ventanaEmergente);
-
-
+            // Inicia la aplicación con el formulario principal
+            Application.Run(new pruebaForm());
         }
     }
 }

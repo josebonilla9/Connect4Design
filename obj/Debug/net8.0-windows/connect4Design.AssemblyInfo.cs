@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Connect4Design")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0a3b2ab85a9945a0d1baace6a2dd4db1b277f31b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9f64eeb4a6ca5f5f4dc03604823f1bb8395690a5")]
 [assembly: System.Reflection.AssemblyProductAttribute("Connect4Design")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Connect4Design")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
