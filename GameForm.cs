@@ -24,7 +24,7 @@ namespace prueba
             currentPlayer = 1;
             gameOver = false;
 
-            string apiKey = "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"; // Aquí va la API Key
+            string apiKey = ""; // Aquí va la API Key
             aiProgram = new AIProgram(apiKey);
         }
 
