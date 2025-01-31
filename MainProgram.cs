@@ -10,8 +10,7 @@ namespace prueba
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            // Inicia la aplicación con el formulario principal
-            Application.Run(new pruebaForm());
+            Application.Run(new GameForm());
         }
     }
 }

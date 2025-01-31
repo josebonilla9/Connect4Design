@@ -1,6 +1,6 @@
 ﻿namespace Connect4Design
 {
-    partial class pruebaForm
+    partial class GameChatForm
     {
         /// <summary>
         /// Required designer variable.

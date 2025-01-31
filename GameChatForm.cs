@@ -5,7 +5,7 @@ using System.Windows.Forms;
 
 namespace Connect4Design
 {
-    public partial class pruebaForm : Form
+    public partial class GameChatForm : Form
     {
         private Game game;
         private bool isHumanTurn;
@@ -13,7 +13,7 @@ namespace Connect4Design
         private bool gameOver;
         private AIProgram aiProgram;
 
-        public pruebaForm()
+        public GameChatForm()
         {
             InitializeComponent();
             game = new Game();
@@ -21,7 +21,7 @@ namespace Connect4Design
             currentPlayer = 1;
             gameOver = false;
 
-            string apiKey = ""; // Aquí va la API Key
+            string apiKey = "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"; // Aquí va la API Key
             aiProgram = new AIProgram(apiKey);
         }
 

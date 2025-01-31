@@ -1,6 +1,6 @@
 ﻿namespace prueba
 {
-    partial class Form1
+    partial class GameForm
     {
         private System.ComponentModel.IContainer components = null;
 
@@ -31,10 +31,9 @@
             {
                 labelArray[i].Click += label_Click;
 
-                int x = (i % 7) + 1;
-                int y = (i / 7) + 1;
+                int x = i % 7;
 
-                labelArray[i].Tag = $"({x},{y})";
+                labelArray[i].Tag = x.ToString();
             }
         }
 
@@ -48,8 +47,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            difficultyLabel = new Label();
             mainPanel = new Panel();
+            restartButton = new Label();
+            chatBox = new TextBox();
+            gameChatButton = new Label();
             gamePanel = new FlowLayoutPanel();
             firstRowPanel = new FlowLayoutPanel();
             label1 = new Label();
@@ -99,8 +100,6 @@
             label40 = new Label();
             label41 = new Label();
             label42 = new Label();
-            difficultyChooser = new ComboBox();
-            label43 = new Label();
             mainPanel.SuspendLayout();
             gamePanel.SuspendLayout();
             firstRowPanel.SuspendLayout();
@@ -111,25 +110,48 @@
             sixthRowPanel.SuspendLayout();
             SuspendLayout();
             // 
-            // difficultyLabel
-            // 
-            difficultyLabel.AutoSize = true;
-            difficultyLabel.Location = new Point(704, 21);
-            difficultyLabel.Name = "difficultyLabel";
-            difficultyLabel.Size = new Size(58, 15);
-            difficultyLabel.TabIndex = 10;
-            difficultyLabel.Text = "Dificultad";
-            // 
             // mainPanel
             // 
-            mainPanel.Controls.Add(label43);
+            mainPanel.Controls.Add(restartButton);
+            mainPanel.Controls.Add(chatBox);
+            mainPanel.Controls.Add(gameChatButton);
             mainPanel.Controls.Add(gamePanel);
-            mainPanel.Controls.Add(difficultyLabel);
-            mainPanel.Controls.Add(difficultyChooser);
             mainPanel.Location = new Point(-1, 2);
             mainPanel.Name = "mainPanel";
             mainPanel.Size = new Size(961, 667);
             mainPanel.TabIndex = 11;
+            // 
+            // restartButton
+            // 
+            restartButton.AutoSize = true;
+            restartButton.BackColor = Color.Yellow;
+            restartButton.Cursor = Cursors.Hand;
+            restartButton.ForeColor = Color.Red;
+            restartButton.Location = new Point(634, 16);
+            restartButton.Name = "restartButton";
+            restartButton.Size = new Size(52, 15);
+            restartButton.TabIndex = 15;
+            restartButton.Text = "Reiniciar";
+            restartButton.Click += restartButton_Click;
+            // 
+            // chatBox
+            // 
+            chatBox.Enabled = false;
+            chatBox.Location = new Point(72, 13);
+            chatBox.Name = "chatBox";
+            chatBox.Size = new Size(440, 23);
+            chatBox.TabIndex = 14;
+            // 
+            // gameChatButton
+            // 
+            gameChatButton.AutoSize = true;
+            gameChatButton.Cursor = Cursors.Hand;
+            gameChatButton.Location = new Point(841, 16);
+            gameChatButton.Name = "gameChatButton";
+            gameChatButton.Size = new Size(77, 15);
+            gameChatButton.TabIndex = 13;
+            gameChatButton.Text = "Jugar en chat";
+            gameChatButton.Click += gameChatButton_Click;
             // 
             // gamePanel
             // 
@@ -607,32 +629,13 @@
             label42.Size = new Size(129, 96);
             label42.TabIndex = 13;
             // 
-            // difficultyChooser
-            // 
-            difficultyChooser.FormattingEnabled = true;
-            difficultyChooser.Location = new Point(768, 18);
-            difficultyChooser.Name = "difficultyChooser";
-            difficultyChooser.Size = new Size(121, 23);
-            difficultyChooser.TabIndex = 11;
-            // 
-            // label43
-            // 
-            label43.AutoSize = true;
-            label43.Cursor = Cursors.Hand;
-            label43.Location = new Point(149, 17);
-            label43.Name = "label43";
-            label43.Size = new Size(109, 15);
-            label43.TabIndex = 13;
-            label43.Text = "Ventana Emergente";
-            label43.Click += label43_Click;
-            // 
-            // Form1
+            // GameForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(963, 671);
             Controls.Add(mainPanel);
-            Name = "Form1";
+            Name = "GameForm";
             Text = "Form1";
             mainPanel.ResumeLayout(false);
             mainPanel.PerformLayout();
@@ -647,10 +650,8 @@
         }
 
         #endregion
-        private Label difficultyLabel;
         private Panel mainPanel;
         private FlowLayoutPanel firstRowPanel;
-        private ComboBox difficultyChooser;
         private FlowLayoutPanel gamePanel;
         private FlowLayoutPanel secondRowPanel;
         private FlowLayoutPanel thirdRowPanel;
@@ -699,6 +700,8 @@
         private Label label40;
         private Label label41;
         private Label label42;
-        private Label label43;
+        private Label gameChatButton;
+        private TextBox chatBox;
+        private Label restartButton;
     }
 }
