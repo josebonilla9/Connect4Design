@@ -1,17 +1,34 @@
 ﻿using System.Text.Json.Nodes;
 using GroqApiLibrary;
 
+/// <summary>
+/// Clase principal para interactuar con la API de Groq.
+/// </summary>
 public class AIProgram
 {
     private readonly GroqApiClient groqApi;
+
+    /// <summary>
+    /// Mensajes intercambiados con la IA.
+    /// </summary>
     public JsonArray Messages { get; }
 
+    /// <summary>
+    /// Inicializa una nueva instancia de la clase <see cref="AIProgram"/>.
+    /// </summary>
+    /// <param name="apiKey">Clave API para autenticar con el servicio de Groq.</param>
     public AIProgram(string apiKey)
     {
         groqApi = new GroqApiClient(apiKey);
         Messages = new JsonArray();
     }
 
+    /// <summary>
+    /// Obtiene una respuesta de la IA basada en el estado actual del tablero.
+    /// </summary>
+    /// <param name="boardState">Estado actual del tablero.</param>
+    /// <returns>Respuesta de la IA indicando la columna donde debería jugar.</returns>
+    /// <exception cref="Exception">Se lanza si no se obtiene respuesta de la IA.</exception>
     public async Task<string> GetAIResponseAsync(string boardState)
     {
         Messages.Add(new JsonObject
